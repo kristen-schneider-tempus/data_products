@@ -2,6 +2,13 @@
 
 [Link to Jira Ticket](https://tempuslabs.atlassian.net/browse/BFXA-5513?atlOrigin=eyJpIjoiZGI4YWUxZmIyZDIyNGM3NmE0NDVkMzc0NDBkYTZlNTMiLCJwIjoiaiJ9)
 
+### bfx-bed data product changes
+Update the following `fields` in the `bfx-bed` data product to accurately describe the bed file.
+- [ ] `metadata.custom.assay.description`: _If applicable, the assay that the bed applies to. If it applies to all assays, use \"n/a\". If it applies to a group of assays, use the shortest relevant assay identifier, e.g., xT.v1-4 => \"xT\", or any liquid assay => \"ctdna\". Avoid concatenation._
+- [ ] `metadata.custom.assay.description`: _Indication of content, e.g., \"reportable-range_
+- [ ] `metadata.custom.context-version.description`: _Semver indication of data version for given context e.g. context=reportable-range context-version=vX.X.X_
+- [ ] `data.spec.columns`: _chrom, start, end, name...etc._
+
 ### Important Data and Git Repositories
 [Tempus Core Platform (TCP)](https://core-platform-console.securetempus.com/data-product-types/) [`bfx-bed`](https://core-platform-console.securetempus.com/data-product-types/bfx-bed/) data product.
 
@@ -18,7 +25,6 @@ aws s3 cp s3://pipeline-refdata/bed/rs_v2_raw/ ./bed_files
 ```
 
 [REPO: bioinf-rna](https://github.com/tempuslabs/bioinf-rna)
-
 
 
 ### Helful Resources
